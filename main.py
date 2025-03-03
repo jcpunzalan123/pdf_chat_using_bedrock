@@ -5,7 +5,6 @@ import streamlit as st
 import json
 import os
 import uuid
-# import response
 
 ## BEDROCK
 from langchain_community.embeddings import BedrockEmbeddings
@@ -19,7 +18,6 @@ BUCKET_NAME = os.getenv("BUCKET_NAME")
 
 def get_unique_id():
     return str(uuid.uuid4())
-
 
 
 def call_bedrock_model(body):
@@ -44,6 +42,13 @@ def analyze_pdf_using_bedrock(pdf_file):
     }
 
     call_bedrock_model(body)
+
+
+def lambda_handler(event, context):
+    return{
+        'statusCode': 200,
+        'body': json.dumps('Hello from Lambda!')
+    }
 
 def main():
     st.write("Chat with PDF using Amazon Bedrock!")
