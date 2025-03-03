@@ -5,7 +5,7 @@ import streamlit as st
 import json
 import os
 import uuid
-import response
+# import response
 
 ## BEDROCK
 from langchain_community.embeddings import BedrockEmbeddings
