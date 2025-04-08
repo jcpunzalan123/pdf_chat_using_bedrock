@@ -40,7 +40,7 @@ interacting with the PDF files.
 **Running the Chatbot**
 ----------------------
 
-1.  Clone the repository: `git clone https://github.com/jcpunzalan123/chatbot_using_bedrock.git`
+1.  Clone the repository: `git clone https://github.com/jcpunzalan123/pdf_chat_using_bedrock.git`
 2.  Install dependencies: `pip install -r requirements.txt`
 3.  Build the Docker image: `docker build -t your-image-name .`
 4.  Run the container: `docker run -p 8083:8083 your-image-name`
